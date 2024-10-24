@@ -35,3 +35,5 @@ model UsersOnTechs {
 
   @@id([userId, techId])
 }
+
+
