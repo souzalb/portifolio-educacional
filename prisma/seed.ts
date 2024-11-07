@@ -1,6 +1,6 @@
-const { PrismaClient } = require("@prisma/client");
+import { PrismaClient } from "@prisma/client"
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient()
 
 async function main() {
   // Criando usuários
@@ -8,124 +8,333 @@ async function main() {
     data: [
       {
         id: "1",
-        name: "Alice",
+        email: "douglas@sp.senai.br",
+        name: "Douglas Reis",
         imageUrl:
-          "https://media.istockphoto.com/id/1309328823/pt/foto/headshot-portrait-of-smiling-male-employee-in-office.jpg?s=1024x1024&w=is&k=20&c=3R9kDoCR3dBS-eS-bnX0oat3EUd2n3wG3H5ikVZ4-2w=",
+          "https://drive.google.com/uc?export=view&id=1PlOzAsDjDjYwPdA8h_G5tcylBMXZ5Te3",
       },
       {
         id: "2",
-        name: "Bob",
+        email: "jaco@sp.senai.br",
+        name: "Vagner Jacó",
         imageUrl:
-          "https://media.istockphoto.com/id/1300972574/pt/foto/millennial-male-team-leader-organize-virtual-workshop-with-employees-online.jpg?s=1024x1024&w=is&k=20&c=hpcEe-lABirPmDzac5e8X5s10Hu-hE40OpQW395TLBI=",
+          "https://drive.google.com/uc?export=view&id=13oB-7OMIxaD9rrZ82sbc_28qghXZmfr4",
       },
       {
         id: "3",
-        name: "Charlie",
+        email: "thales@sp.senai.br",
+        name: "Thales Santos",
         imageUrl:
-          "https://media.istockphoto.com/id/1407759041/pt/foto/confident-happy-beautiful-hispanic-student-girl-indoor-head-shot-portrait.jpg?s=1024x1024&w=is&k=20&c=LeC0g7sNOTrrXJE7EV1aCM6l2-NyLHuqGiobrDDj-BY=",
+          "https://drive.google.com/uc?export=view&id=1NXXYpJ2PPFkansYYRVfGM0L8hjq1ClYS",
       },
       {
         id: "4",
-        name: "Dave",
+        email: "ronaldo@sp.senai.br",
+        name: "Ronaldo Esperandio",
         imageUrl:
-          "https://static9.depositphotos.com/1006708/1096/i/450/depositphotos_10962027-stock-photo-mid-adult-man-with-glasses.jpg",
+          "https://drive.google.com/uc?export=view&id=1MM6WNo8Gz3Q5AWm2ZBAhibiz4jL5gjZ_",
       },
       {
         id: "5",
-        name: "Eve",
+        email: "paulo@sp.senai.br",
+        name: "Paulo Matos",
         imageUrl:
-          "https://img.freepik.com/fotos-gratis/homem-ridicularizando-um-urbano-bicicleta_23-2148138880.jpg",
+          "https://drive.google.com/uc?export=view&id=1T3HIqqzU9l7RTjPnA8D1fARCB2Ii6yDY",
+      },
+      {
+        id: "6",
+        email: "lucas@sp.senai.br",
+        name: "Lucas Flores",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1uL0Z1l75JpvmynN7Zu4R1_We3N89FgdI",
+      },
+      {
+        id: "7",
+        email: "leonardo@sp.senai.br",
+        name: "Leonardo de Paula",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1k0srAX4EIqSi6pLLCCUmNK1WZUxl_fYW",
+      },
+      {
+        id: "8",
+        email: "gustavo@sp.senai.br",
+        name: "Gustavo Feriani",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1ANWLf36CFmwZOU5XTcEgpCzUVKhZl4pj",
+      },
+      {
+        id: "9",
+        email: "mayke@sp.senai.br",
+        name: "Mayke Pinheiro",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1Kk7Pqnua0eNJIVB3NCCTWGP5T0BO8cqD",
+      },
+      {
+        id: "10",
+        email: "celso@sp.senai.br",
+        name: "Celso Pinto",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1cCK2hUNy_U00ZHu4jwMr4JB7y6DGpgzo",
+      },
+      {
+        id: "11",
+        email: "alexandro@sp.senai.br",
+        name: "Alexandro Cruz",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1WlWsiyiLen4dQiG0i41CcpuMTbmgSeyk",
       },
     ],
-  });
+  })
 
   // Criando tecnologias
   const techs = await prisma.tech.createMany({
     data: [
       {
         id: "1",
-        name: "React",
+        name: "Vida",
         rating: 4.5,
-        description: "A JavaScript library for building user interfaces",
+        description:
+          "A comunicação permite fazer a detecção de falhas e diagnosticar os veículos, bem como efetuar o download de software.",
         imageUrl:
-          "https://www.mundojs.com.br/wp-content/uploads/2019/03/react.png",
-        access: "public",
-        link: "https://reactjs.org",
-        type: "library",
-        area: "frontend",
+          "https://drive.google.com/uc?export=view&id=14hdMsh53qZg0W6CzhiHF48tM8ICVMkyP",
+        access: "Digital",
+        link: "https://vidaresources.volvocars.biz/",
+        type: "Software",
+        area: "Automotiva",
       },
       {
         id: "2",
-        name: "Node.js",
+        name: "Trello",
         rating: 4.7,
-        description: "A JavaScript runtime built on Chrome's V8 engine",
+        description:
+          "O Trello reúne as tarefas, colegas de equipe e ferramentas, mantendo tudo em um só lugar, mesmo se o time for distribuído.",
         imageUrl:
-          "https://miro.medium.com/v2/resize:fit:866/1*1UBNwRFaslvqt_G3Njw3pg.jpeg",
-        access: "public",
-        link: "https://nodejs.org",
-        type: "runtime",
-        area: "backend",
+          "https://drive.google.com/uc?export=view&id=1MtM-tq30RJejy8EdYB5k_A0YAtnp6fxH",
+        access: "Digital",
+        link: "https://trello.com/pt-BR",
+        type: "Site",
+        area: "Gestão",
       },
       {
         id: "3",
-        name: "GraphQL",
+        name: "Socrative",
         rating: 4.6,
-        description: "A query language for APIs",
-        imageUrl: "https://www.gravitee.io/hubfs/graphql.png",
-        access: "public",
-        link: "https://graphql.org",
-        type: "query language",
-        area: "API",
+        description:
+          "O Socrative é uma aplicação simples de elaboração de questionários (preparação de testes, quizzes etc.) que pode ser usada em sala de aula para receber feedback em tempo real da aprendizagem do aluno.",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1cOl95cDYVO9ddw0Zdy2kSCB8T_U_gvlb",
+        access: "Digital",
+        link: "https://socrative.com/",
+        type: "Site",
+        area: "Transversal",
       },
       {
         id: "4",
-        name: "Docker",
+        name: "Simplo",
         rating: 4.8,
         description:
-          "A platform for developing, shipping, and running applications",
+          "O acervo tem informações técnicas simplificadas para cerca de 22 mil veículos, mais de 60 montadoras nacionais e importadas.",
         imageUrl:
-          "https://blog.codewithdan.com/wp-content/uploads/2023/06/Docker-Logo.png",
-        access: "public",
-        link: "https://docker.com",
-        type: "container",
-        area: "devops",
+          "https://drive.google.com/uc?export=view&id=1hYHXC4lu8esegdfIjqiaTXLKl8Sja3_a",
+        access: "Digital",
+        link: "https://www.simplusbr.com/",
+        type: "Site",
+        area: "Automotiva",
       },
       {
         id: "5",
-        name: "PostgreSQL",
+        name: "Figma",
         rating: 4.9,
         description:
-          "A powerful, open-source object-relational database system",
+          "Plataforma online para criação de interfaces, wireframes e protótipos. É muito utilizado para design de interface, design de experiência do usuário ou design de produto, mas oferece recursos de colaboração, personalização, componentização e prototipagem, tornando-o uma ferramenta versátil para ideação, gestão de projetos, registro de ideias, entre outros.",
         imageUrl:
-          "https://miro.medium.com/v2/resize:fit:610/1*lZrXmWJRDLqIImJThs5Lrw.png",
-        access: "public",
-        link: "https://postgresql.org",
-        type: "database",
-        area: "database",
+          "https://drive.google.com/uc?export=view&id=1gNDPB4YB_zvPqll3SE-ovd69ir560Zio",
+        access: "Digital",
+        link: "https://www.figma.com/pt-br/",
+        type: "Site",
+        area: "Tecnologia da Informação",
+      },
+      {
+        id: "6",
+        name: "ABNT Coleção",
+        rating: 4.9,
+        description:
+          "Base de dados online de normas técnicas da ABNT (Associação Brasileira de Normas Técnicas). O ABNT Coleção oferece acesso a um vasto acervo de normas, desde as mais gerais até as específicas para áreas como construção civil, segurança, saúde, meio ambiente e indústria. A plataforma permite pesquisa por palavras-chave, filtros por categorias e download de normas",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1H2R6kw7OphLK8SPr7_keXZ9u4m-uAnQF",
+        access: "Digital",
+        link: "https://abntcolecao.com.br/",
+        type: "Site",
+        area: "Transversal",
+      },
+      {
+        id: "7",
+        name: "Arduino IDE",
+        rating: 4.5,
+        description:
+          "A IDE Arduino é um ambiente de desenvolvimento integrado usado para programar microcontroladores da plataforma Arduino. Ela permite escrever, compilar e carregar código em placas Arduino de forma simples, com suporte para uma vasta biblioteca de funções e exemplos, tornando o desenvolvimento de projetos eletrônicos acessível tanto para iniciantes quanto para profissionais.",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1mYfiKSfoRYboYEZVRIJZfFXgFybJ8S49",
+        access: "Digital",
+        link: "https://www.arduino.cc/",
+        type: "Software",
+        area: "Eletroeletrônica",
+      },
+      {
+        id: "8",
+        name: "AutoCAD",
+        rating: 4.7,
+        description:
+          "Software de desenho 2D e 3D amplamente utilizado em projetos de arquitetura, engenharia e construção. Oferece ferramentas para criação de desenhos precisos, modelagem de objetos complexos, geração de documentação técnica e muito mais. Possui uma interface amigável e personalizável, além de uma vasta biblioteca de recursos e plugins.",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1YvGyyxCR6KIVr82RZzEiTY3wDJkWyIpC",
+        access: "Digital",
+        link: "https://web.autocad.com/",
+        type: "Software",
+        area: "Transversal",
+      },
+      {
+        id: "9",
+        name: "Canva",
+        rating: 4.8,
+        description:
+          "Plataforma online de design gráfico intuitiva e fácil de usar, com ferramentas para criação de apresentações, cartões, posts para mídias sociais, logos e outros materiais visuais. Canva oferece uma biblioteca de templates, imagens, fontes e elementos gráficos para ajudar os usuários a criar designs profissionais, mesmo sem experiência prévia.",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1BvIZE6lzcxX4v5BlBh4hUQHcqqp_75qY",
+        access: "Digital",
+        link: "https://www.canva.com/",
+        type: "Site",
+        area: "Transversal",
+      },
+      {
+        id: "10",
+        name: "Bearing Doctor-NSK",
+        rating: 4.5,
+        description:
+          "Aplicativo móvel desenvolvido pela NSK para auxiliar na diagnose de rolamentos. Permite que os usuários identifiquem os tipos de rolamentos, verifiquem suas características e encontrem soluções para problemas comuns. Além disso, o aplicativo oferece acesso a um banco de dados com informações técnicas e recursos de diagnóstico.",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1ItAAqTW91rlBjQc6NS0wD-MLqo0w6Wpa",
+        access: "Digital",
+        link: "https://play.google.com/store/apps/details?id=com.nsk.android.jp.sixteen.bearingdoc&hl=pt_BR",
+        type: "Aplicativo",
+        area: "Metalmecânica",
+      },
+      {
+        id: "11",
+        name: "Google Classroom",
+        rating: 4.9,
+        description:
+          "O Google Classroom é uma plataforma de gerenciamento de aulas que facilita a comunicação e organização entre professores e alunos. Ele permite a criação e distribuição de tarefas, envio de feedback, e integração com outras ferramentas do Google, como Drive e Meet, em um ambiente digital acessível e fácil de usar.",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1fcLtSOlzb4yLzwxL9EWJeb7l7KLezxdS",
+        access: "Digital",
+        link: "https://classroom.google.com/",
+        type: "Site",
+        area: "Transversal",
+      },
+      {
+        id: "12",
+        name: "Google Docs",
+        rating: 4.7,
+        description:
+          "O Google Docs é um editor de texto online que permite criar, editar e compartilhar documentos em tempo real. Ele oferece recursos de formatação, comentários e sugestões, além de integração com outras ferramentas do Google, facilitando a colaboração entre vários usuários em um único documento.",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1fRHwCq7ow1dFwrNV_oew4ST3oauYdsCD",
+        access: "Digital",
+        link: "https://docs.google.com/",
+        type: "Site",
+        area: "Transversal",
+      },
+      {
+        id: "13",
+        name: "Ferramentas Inteligentes",
+        rating: 4.9,
+        description:
+          "O Aplicativo Ferramentas Inteligentes é uma aplicação da PC Mehanik que inclui mais de 40 ferramentas e utilitários para carpintaria, construção e medição. A aplicação utiliza os sensores do dispositivo para funcionar como uma caixa de ferramentas, como um canivete suíço.",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1QYTsOnRG31CPTo3aTKNkMNXPSYiFgSqt",
+        access: "Digital",
+        link: "https://play.google.com/store/apps/details?id=com.pcmehanik.smarttoolbox&hl=pt_BR",
+        type: "Aplicativo",
+        area: "Transversal",
+      },
+      {
+        id: "14",
+        name: "Kahoot",
+        rating: 4.9,
+        description:
+          "Plataforma online para criação e realização de quizzes interativos para aprendizado. O Kahoot! permite que professores e educadores criem quizzes gamificados para envolver os alunos, testar seus conhecimentos e promover a interação em sala de aula.",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=19Jsf_XOlv_f2d-rAjdLZcpz81jNgkYtN",
+        access: "Digital",
+        link: "https://kahoot.com",
+        type: "Site",
+        area: "Aulas Online",
+      },
+      {
+        id: "15",
+        name: "Office",
+        rating: 4.9,
+        description:
+          "O Pacote Office é um conjunto de softwares de produtividade desenvolvido pela Microsoft, que inclui programas como Word, Excel, PowerPoint, Outlook, entre outros. Ele oferece ferramentas essenciais para criar documentos de texto, planilhas, apresentações e gerenciar e-mails, sendo amplamente utilizado em ambientes corporativos, acadêmicos e pessoais.",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1QA1sQIRhutwPEK2iAom0iraQriPh3iqh",
+        access: "Digital",
+        link: "https://www.office.com/",
+        type: "Site/Software",
+        area: "Transversal",
       },
     ],
-  });
+  })
 
   // Criando relações entre usuários e tecnologias
   const userTechRelations = await prisma.usersOnTechs.createMany({
     data: [
-      { userId: "1", techId: "1" }, // Alice -> React
-      { userId: "1", techId: "2" }, // Alice -> Node.js
-      { userId: "2", techId: "3" }, // Bob -> GraphQL
-      { userId: "3", techId: "4" }, // Charlie -> Docker
-      { userId: "4", techId: "5" }, // Dave -> PostgreSQL
-      { userId: "5", techId: "1" }, // Eve -> React
+      { userId: "2", techId: "1" },
+      { userId: "9", techId: "1" },
+      { userId: "7", techId: "2" },
+      { userId: "4", techId: "3" },
+      { userId: "5", techId: "3" },
+      { userId: "3", techId: "4" },
+      { userId: "5", techId: "4" },
+      { userId: "6", techId: "4" },
+      { userId: "10", techId: "4" },
+      { userId: "2", techId: "4" },
+      { userId: "11", techId: "4" },
+      { userId: "8", techId: "5" },
+      { userId: "1", techId: "5" },
+      { userId: "1", techId: "6" },
+      { userId: "2", techId: "6" },
+      { userId: "3", techId: "7" },
+      { userId: "4", techId: "7" },
+      { userId: "5", techId: "8" },
+      { userId: "6", techId: "8" },
+      { userId: "7", techId: "9" },
+      { userId: "8", techId: "9" },
+      { userId: "9", techId: "10" },
+      { userId: "1", techId: "10" },
+      { userId: "2", techId: "11" },
+      { userId: "3", techId: "11" },
+      { userId: "4", techId: "12" },
+      { userId: "5", techId: "12" },
+      { userId: "6", techId: "13" },
+      { userId: "7", techId: "13" },
+      { userId: "8", techId: "14" },
+      { userId: "9", techId: "14" },
+      { userId: "1", techId: "15" },
+      { userId: "2", techId: "15" },
     ],
-  });
+  })
 
-  console.log({ users, techs, userTechRelations });
+  console.log({ users, techs, userTechRelations })
 }
 
 main()
-  .catch((e) => {
-    console.error(e);
-    process.exit(1);
+  .then(async () => {
+    await prisma.$disconnect()
   })
-  .finally(async () => {
-    await prisma.$disconnect();
-  });
+  .catch(async (e) => {
+    console.error(e)
+    await prisma.$disconnect()
+    process.exit(1)
+  })

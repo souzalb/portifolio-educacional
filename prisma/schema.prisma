@@ -10,7 +10,8 @@ datasource db {
 model User {
   id       String         @id @default(uuid())
   name     String
-  imageUrl String
+  email    String? @default("teste@teste.com")
+  imageUrl String 
   techs    UsersOnTechs[]
 }
 
@@ -35,5 +36,3 @@ model UsersOnTechs {
 
   @@id([userId, techId])
 }
-
-
