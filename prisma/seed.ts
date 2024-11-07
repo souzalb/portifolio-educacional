@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client"
+const { PrismaClient } = require("@prisma/client") // eslint-disable-line
 
 const prisma = new PrismaClient()
 
@@ -10,77 +10,77 @@ async function main() {
         id: "1",
         email: "douglas@sp.senai.br",
         name: "Douglas Reis",
-        imageUrl:
+        image:
           "https://drive.google.com/uc?export=view&id=1PlOzAsDjDjYwPdA8h_G5tcylBMXZ5Te3",
       },
       {
         id: "2",
         email: "jaco@sp.senai.br",
         name: "Vagner Jacó",
-        imageUrl:
+        image:
           "https://drive.google.com/uc?export=view&id=13oB-7OMIxaD9rrZ82sbc_28qghXZmfr4",
       },
       {
         id: "3",
         email: "thales@sp.senai.br",
         name: "Thales Santos",
-        imageUrl:
+        image:
           "https://drive.google.com/uc?export=view&id=1NXXYpJ2PPFkansYYRVfGM0L8hjq1ClYS",
       },
       {
         id: "4",
         email: "ronaldo@sp.senai.br",
         name: "Ronaldo Esperandio",
-        imageUrl:
+        image:
           "https://drive.google.com/uc?export=view&id=1MM6WNo8Gz3Q5AWm2ZBAhibiz4jL5gjZ_",
       },
       {
         id: "5",
         email: "paulo@sp.senai.br",
         name: "Paulo Matos",
-        imageUrl:
+        image:
           "https://drive.google.com/uc?export=view&id=1T3HIqqzU9l7RTjPnA8D1fARCB2Ii6yDY",
       },
       {
         id: "6",
         email: "lucas@sp.senai.br",
         name: "Lucas Flores",
-        imageUrl:
+        image:
           "https://drive.google.com/uc?export=view&id=1uL0Z1l75JpvmynN7Zu4R1_We3N89FgdI",
       },
       {
         id: "7",
         email: "leonardo@sp.senai.br",
         name: "Leonardo de Paula",
-        imageUrl:
+        image:
           "https://drive.google.com/uc?export=view&id=1k0srAX4EIqSi6pLLCCUmNK1WZUxl_fYW",
       },
       {
         id: "8",
         email: "gustavo@sp.senai.br",
         name: "Gustavo Feriani",
-        imageUrl:
+        image:
           "https://drive.google.com/uc?export=view&id=1ANWLf36CFmwZOU5XTcEgpCzUVKhZl4pj",
       },
       {
         id: "9",
         email: "mayke@sp.senai.br",
         name: "Mayke Pinheiro",
-        imageUrl:
+        image:
           "https://drive.google.com/uc?export=view&id=1Kk7Pqnua0eNJIVB3NCCTWGP5T0BO8cqD",
       },
       {
         id: "10",
         email: "celso@sp.senai.br",
         name: "Celso Pinto",
-        imageUrl:
+        image:
           "https://drive.google.com/uc?export=view&id=1cCK2hUNy_U00ZHu4jwMr4JB7y6DGpgzo",
       },
       {
         id: "11",
         email: "alexandro@sp.senai.br",
         name: "Alexandro Cruz",
-        imageUrl:
+        image:
           "https://drive.google.com/uc?export=view&id=1WlWsiyiLen4dQiG0i41CcpuMTbmgSeyk",
       },
     ],
