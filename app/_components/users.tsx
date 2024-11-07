@@ -18,6 +18,7 @@ const Users = async ({ tech }: TechItemProps) => {
       user: true,
     },
   })
+
   return (
     <>
       {getUsersTech.length > 1
@@ -30,20 +31,20 @@ const Users = async ({ tech }: TechItemProps) => {
                 >
                   <Image
                     className="cursor-pointer rounded-full object-cover"
-                    src={userOnTechs.user.imageUrl}
+                    src={userOnTechs.user.image ?? ""}
                     width={30}
                     height={30}
-                    alt={userOnTechs.user.name}
+                    alt={userOnTechs.user.name ?? ""}
                   />
                 </HoverCardTrigger>
                 <HoverCardContent className="w-fit rounded-xl">
                   <div className="flex items-center justify-between gap-3">
                     <Image
                       className="rounded-full object-cover"
-                      src={userOnTechs.user.imageUrl}
+                      src={userOnTechs.user.image ?? ""}
                       width={35}
                       height={35}
-                      alt={userOnTechs.user.name}
+                      alt={userOnTechs.user.name ?? ""}
                     />
 
                     <div className="space-y-1">
@@ -73,10 +74,10 @@ const Users = async ({ tech }: TechItemProps) => {
                   <div className="flex cursor-pointer items-center gap-2">
                     <Image
                       className="rounded-full object-cover"
-                      src={userOnTechs.user.imageUrl}
+                      src={userOnTechs.user.image ?? ""}
                       width={30}
                       height={30}
-                      alt={userOnTechs.user.name}
+                      alt={userOnTechs.user.name ?? ""}
                     />
                     <div className="text-sm text-gray-400">
                       {userOnTechs.user.name}
@@ -88,10 +89,10 @@ const Users = async ({ tech }: TechItemProps) => {
                     <div>
                       <Image
                         className="rounded-full object-cover"
-                        src={userOnTechs.user.imageUrl}
+                        src={userOnTechs.user.image ?? ""}
                         width={35}
                         height={35}
-                        alt={userOnTechs.user.name}
+                        alt={userOnTechs.user.name ?? ""}
                         key={userOnTechs.userId}
                       />
                     </div>
