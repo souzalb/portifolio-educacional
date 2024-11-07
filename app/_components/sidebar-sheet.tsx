@@ -1,16 +1,20 @@
 "use client"
 
-import { HomeIcon, LogInIcon, LogOutIcon, UserCircle2Icon } from "lucide-react"
+import { FilePlus2Icon, HomeIcon, LogInIcon, LogOutIcon } from "lucide-react"
 import { Button } from "./ui/button"
 import { SheetClose, SheetContent, SheetHeader, SheetTitle } from "./ui/sheet"
-import { Avatar } from "./ui/avatar"
+import { Avatar, AvatarImage } from "./ui/avatar"
 import Link from "next/link"
 import Image from "next/image"
 import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog"
 import SignInDialog from "./sign-in-dialog"
 import { quickSearchOption } from "../_constants/search"
+import { signOut, useSession } from "next-auth/react"
 
 const SidebarSheet = () => {
+  const { data } = useSession()
+  const handleLogoutClick = () => signOut()
+
   return (
     <SheetContent className="overflow-y-auto">
       <SheetHeader>
@@ -18,34 +22,35 @@ const SidebarSheet = () => {
       </SheetHeader>
 
       <div className="flex items-center justify-between gap-3 border-b border-solid py-5">
-        <div className="flex items-center gap-2">
-          <Avatar>
-            {/* <AvatarImage src="" /> */}
-            <UserCircle2Icon size={40} />
-          </Avatar>
+        {data?.user ? (
+          <div className="flex items-center gap-2">
+            <Avatar>
+              <AvatarImage src={data?.user?.image ?? ""} />
+            </Avatar>
 
-          <div>
-            {/* TODO: nome e email */}
-            <p className="font-bold">Bem-vindo!</p>
-            <p className="text-xs">Portifólio Tech</p>
+            <div>
+              <p className="font-bold">{data.user.name}</p>
+              <p className="text-xs">{data.user.email}</p>
+            </div>
           </div>
-        </div>
-
-        <>
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button size="icon">
-                <LogInIcon />
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="w-[70%] rounded-xl">
-              <SignInDialog />
-            </DialogContent>
-          </Dialog>
-        </>
+        ) : (
+          <>
+            <h2 className="font-bold">Olá, faça seu login!</h2>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button size="icon">
+                  <LogInIcon />
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="w-[70%] rounded-xl">
+                <SignInDialog />
+              </DialogContent>
+            </Dialog>
+          </>
+        )}
       </div>
 
-      <div className="flex flex-col gap-2 border-b border-solid py-5">
+      <div className="flex flex-col gap-2 border-b border-solid py-2">
         <SheetClose asChild>
           <Button className="justify-start gap-2" variant="ghost" asChild>
             <Link href="/">
@@ -54,6 +59,17 @@ const SidebarSheet = () => {
             </Link>
           </Button>
         </SheetClose>
+
+        {data?.user?.email == "lincolncloud23@gmail.com" ? (
+          <Button className="justify-start gap-2" variant="ghost" asChild>
+            <Link href="/">
+              <FilePlus2Icon size={18} />
+              Cadastrar Tecnologia
+            </Link>
+          </Button>
+        ) : (
+          ""
+        )}
       </div>
 
       <div className="flex flex-col gap-2 border-b border-solid py-5">
@@ -78,7 +94,7 @@ const SidebarSheet = () => {
         <Button
           variant="ghost"
           className="justify-start gap-2"
-          // onClick={handleLogoutClick}
+          onClick={handleLogoutClick}
         >
           <LogOutIcon size={18} />
           Sair da conta
