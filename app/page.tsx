@@ -29,7 +29,7 @@ const Home = async () => {
           {/* Text */}
           <div className="lg:w-[20%]">
             <h2 className="text-xl">
-              Olá, <b>Seja Bem-vindo</b>
+              Olá, <b>Seja Bem-vindo!</b>
             </h2>
             <p>
               <span className="capitalize">
