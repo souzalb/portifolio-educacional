@@ -92,7 +92,7 @@ async function main() {
       {
         id: "1",
         name: "Vida",
-        rating: 4.5,
+        rating: "4.5",
         description:
           "A comunicação permite fazer a detecção de falhas e diagnosticar os veículos, bem como efetuar o download de software.",
         imageUrl:
@@ -105,7 +105,7 @@ async function main() {
       {
         id: "2",
         name: "Trello",
-        rating: 4.7,
+        rating: "4.7",
         description:
           "O Trello reúne as tarefas, colegas de equipe e ferramentas, mantendo tudo em um só lugar, mesmo se o time for distribuído.",
         imageUrl:
@@ -118,7 +118,7 @@ async function main() {
       {
         id: "3",
         name: "Socrative",
-        rating: 4.6,
+        rating: "4.6",
         description:
           "O Socrative é uma aplicação simples de elaboração de questionários (preparação de testes, quizzes etc.) que pode ser usada em sala de aula para receber feedback em tempo real da aprendizagem do aluno.",
         imageUrl:
@@ -131,7 +131,7 @@ async function main() {
       {
         id: "4",
         name: "Simplo",
-        rating: 4.8,
+        rating: "4.8",
         description:
           "O acervo tem informações técnicas simplificadas para cerca de 22 mil veículos, mais de 60 montadoras nacionais e importadas.",
         imageUrl:
@@ -144,7 +144,7 @@ async function main() {
       {
         id: "5",
         name: "Figma",
-        rating: 4.9,
+        rating: "4.9",
         description:
           "Plataforma online para criação de interfaces, wireframes e protótipos. É muito utilizado para design de interface, design de experiência do usuário ou design de produto, mas oferece recursos de colaboração, personalização, componentização e prototipagem, tornando-o uma ferramenta versátil para ideação, gestão de projetos, registro de ideias, entre outros.",
         imageUrl:
@@ -157,7 +157,7 @@ async function main() {
       {
         id: "6",
         name: "ABNT Coleção",
-        rating: 4.9,
+        rating: "4.9",
         description:
           "Base de dados online de normas técnicas da ABNT (Associação Brasileira de Normas Técnicas). O ABNT Coleção oferece acesso a um vasto acervo de normas, desde as mais gerais até as específicas para áreas como construção civil, segurança, saúde, meio ambiente e indústria. A plataforma permite pesquisa por palavras-chave, filtros por categorias e download de normas",
         imageUrl:
@@ -170,7 +170,7 @@ async function main() {
       {
         id: "7",
         name: "Arduino IDE",
-        rating: 4.5,
+        rating: "4.5",
         description:
           "A IDE Arduino é um ambiente de desenvolvimento integrado usado para programar microcontroladores da plataforma Arduino. Ela permite escrever, compilar e carregar código em placas Arduino de forma simples, com suporte para uma vasta biblioteca de funções e exemplos, tornando o desenvolvimento de projetos eletrônicos acessível tanto para iniciantes quanto para profissionais.",
         imageUrl:
@@ -183,7 +183,7 @@ async function main() {
       {
         id: "8",
         name: "AutoCAD",
-        rating: 4.7,
+        rating: "4.7",
         description:
           "Software de desenho 2D e 3D amplamente utilizado em projetos de arquitetura, engenharia e construção. Oferece ferramentas para criação de desenhos precisos, modelagem de objetos complexos, geração de documentação técnica e muito mais. Possui uma interface amigável e personalizável, além de uma vasta biblioteca de recursos e plugins.",
         imageUrl:
@@ -196,7 +196,7 @@ async function main() {
       {
         id: "9",
         name: "Canva",
-        rating: 4.8,
+        rating: "4.8",
         description:
           "Plataforma online de design gráfico intuitiva e fácil de usar, com ferramentas para criação de apresentações, cartões, posts para mídias sociais, logos e outros materiais visuais. Canva oferece uma biblioteca de templates, imagens, fontes e elementos gráficos para ajudar os usuários a criar designs profissionais, mesmo sem experiência prévia.",
         imageUrl:
@@ -209,7 +209,7 @@ async function main() {
       {
         id: "10",
         name: "Bearing Doctor-NSK",
-        rating: 4.5,
+        rating: "4.5",
         description:
           "Aplicativo móvel desenvolvido pela NSK para auxiliar na diagnose de rolamentos. Permite que os usuários identifiquem os tipos de rolamentos, verifiquem suas características e encontrem soluções para problemas comuns. Além disso, o aplicativo oferece acesso a um banco de dados com informações técnicas e recursos de diagnóstico.",
         imageUrl:
@@ -222,7 +222,7 @@ async function main() {
       {
         id: "11",
         name: "Google Classroom",
-        rating: 4.9,
+        rating: "4.9",
         description:
           "O Google Classroom é uma plataforma de gerenciamento de aulas que facilita a comunicação e organização entre professores e alunos. Ele permite a criação e distribuição de tarefas, envio de feedback, e integração com outras ferramentas do Google, como Drive e Meet, em um ambiente digital acessível e fácil de usar.",
         imageUrl:
@@ -235,7 +235,7 @@ async function main() {
       {
         id: "12",
         name: "Google Docs",
-        rating: 4.7,
+        rating: "4.7",
         description:
           "O Google Docs é um editor de texto online que permite criar, editar e compartilhar documentos em tempo real. Ele oferece recursos de formatação, comentários e sugestões, além de integração com outras ferramentas do Google, facilitando a colaboração entre vários usuários em um único documento.",
         imageUrl:
@@ -248,7 +248,7 @@ async function main() {
       {
         id: "13",
         name: "Ferramentas Inteligentes",
-        rating: 4.9,
+        rating: "4.9",
         description:
           "O Aplicativo Ferramentas Inteligentes é uma aplicação da PC Mehanik que inclui mais de 40 ferramentas e utilitários para carpintaria, construção e medição. A aplicação utiliza os sensores do dispositivo para funcionar como uma caixa de ferramentas, como um canivete suíço.",
         imageUrl:
@@ -261,7 +261,7 @@ async function main() {
       {
         id: "14",
         name: "Kahoot",
-        rating: 4.9,
+        rating: "4.9",
         description:
           "Plataforma online para criação e realização de quizzes interativos para aprendizado. O Kahoot! permite que professores e educadores criem quizzes gamificados para envolver os alunos, testar seus conhecimentos e promover a interação em sala de aula.",
         imageUrl:
@@ -274,7 +274,7 @@ async function main() {
       {
         id: "15",
         name: "Office",
-        rating: 4.9,
+        rating: "4.9",
         description:
           "O Pacote Office é um conjunto de softwares de produtividade desenvolvido pela Microsoft, que inclui programas como Word, Excel, PowerPoint, Outlook, entre outros. Ele oferece ferramentas essenciais para criar documentos de texto, planilhas, apresentações e gerenciar e-mails, sendo amplamente utilizado em ambientes corporativos, acadêmicos e pessoais.",
         imageUrl:

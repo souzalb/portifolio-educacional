@@ -1,18 +1,22 @@
 /*
   Warnings:
 
+  - You are about to drop the column `imageUrl` on the `User` table. All the data in the column will be lost.
   - A unique constraint covering the columns `[email]` on the table `User` will be added. If there are existing duplicate values, this will fail.
-  - Made the column `email` on table `User` required. This step will fail if there are existing NULL values in that column.
+  - Added the required column `email` to the `User` table without a default value. This is not possible if the table is not empty.
 
 */
 -- AlterTable
-ALTER TABLE "User" ADD COLUMN     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ALTER TABLE "Tech" ALTER COLUMN "rating" SET DATA TYPE TEXT;
+
+-- AlterTable
+ALTER TABLE "User" DROP COLUMN "imageUrl",
+ADD COLUMN     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ADD COLUMN     "email" TEXT NOT NULL,
 ADD COLUMN     "emailVerified" TIMESTAMP(3),
+ADD COLUMN     "image" TEXT,
 ADD COLUMN     "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-ALTER COLUMN "name" DROP NOT NULL,
-ALTER COLUMN "imageUrl" DROP NOT NULL,
-ALTER COLUMN "email" SET NOT NULL,
-ALTER COLUMN "email" DROP DEFAULT;
+ALTER COLUMN "name" DROP NOT NULL;
 
 -- CreateTable
 CREATE TABLE "Account" (
@@ -51,25 +55,8 @@ CREATE TABLE "VerificationToken" (
     CONSTRAINT "VerificationToken_pkey" PRIMARY KEY ("identifier","token")
 );
 
--- CreateTable
-CREATE TABLE "Authenticator" (
-    "credentialID" TEXT NOT NULL,
-    "userId" TEXT NOT NULL,
-    "providerAccountId" TEXT NOT NULL,
-    "credentialPublicKey" TEXT NOT NULL,
-    "counter" INTEGER NOT NULL,
-    "credentialDeviceType" TEXT NOT NULL,
-    "credentialBackedUp" BOOLEAN NOT NULL,
-    "transports" TEXT,
-
-    CONSTRAINT "Authenticator_pkey" PRIMARY KEY ("userId","credentialID")
-);
-
 -- CreateIndex
 CREATE UNIQUE INDEX "Session_sessionToken_key" ON "Session"("sessionToken");
-
--- CreateIndex
-CREATE UNIQUE INDEX "Authenticator_credentialID_key" ON "Authenticator"("credentialID");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
@@ -79,6 +66,3 @@ ALTER TABLE "Account" ADD CONSTRAINT "Account_userId_fkey" FOREIGN KEY ("userId"
 
 -- AddForeignKey
 ALTER TABLE "Session" ADD CONSTRAINT "Session_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
-
--- AddForeignKey
-ALTER TABLE "Authenticator" ADD CONSTRAINT "Authenticator_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;

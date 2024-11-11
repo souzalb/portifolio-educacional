@@ -62,7 +62,7 @@ model VerificationToken {
 model Tech {
   id          String         @id @default(uuid())
   name        String
-  rating      Float
+  rating      String
   description String
   imageUrl    String
   access      String
