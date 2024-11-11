@@ -1,11 +1,13 @@
 import Header2 from "@/app/_components/header2"
 import SidebarSheet from "@/app/_components/sidebar-sheet"
+import TechButtons from "@/app/_components/tech-button"
 import { Badge } from "@/app/_components/ui/badge"
 import { Button } from "@/app/_components/ui/button"
 
 import { Sheet, SheetTrigger } from "@/app/_components/ui/sheet"
 import Users from "@/app/_components/users"
 import { db } from "@/app/_lib/prisma"
+import Home from "@/app/page"
 import {
   ChevronLeftIcon,
   CircleCheckBigIcon,
@@ -18,7 +20,6 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { notFound } from "next/navigation"
 
 interface TechPageProps {
   params: {
@@ -40,7 +41,11 @@ const TechPage = async ({ params }: TechPageProps) => {
   })
 
   if (!tech) {
-    return notFound()
+    return (
+      <>
+        <Home />
+      </>
+    )
   }
 
   return (
@@ -96,8 +101,12 @@ const TechPage = async ({ params }: TechPageProps) => {
             />
           </div>
           <div>
-            <h1 className="mb-3 text-xl font-bold">{tech?.name}</h1>
-            <div className="mb-2 flex items-center gap-2">
+            <div className="flex items-center gap-2">
+              <h1 className="text-xl font-bold">{tech?.name}</h1>
+              <TechButtons id={id} name={tech.name} />
+            </div>
+
+            <div className="mb-2 mt-3 flex items-center gap-2">
               <LightbulbIcon className="text-primary" size={18} />
               <p className="text-sm">{tech?.area}</p>
             </div>

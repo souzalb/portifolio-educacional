@@ -10,6 +10,7 @@ import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog"
 import SignInDialog from "./sign-in-dialog"
 import { quickSearchOption } from "../_constants/search"
 import { signOut, useSession } from "next-auth/react"
+import CreateTechDialog from "./create-tech-dialog"
 
 const SidebarSheet = () => {
   const { data } = useSession()
@@ -61,12 +62,17 @@ const SidebarSheet = () => {
         </SheetClose>
 
         {data?.user?.email == "lincolncloud23@gmail.com" ? (
-          <Button className="justify-start gap-2" variant="ghost" asChild>
-            <Link href="/">
-              <FilePlus2Icon size={18} />
-              Cadastrar Tecnologia
-            </Link>
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild className="justify-start">
+              <Button variant="ghost">
+                <FilePlus2Icon />
+                Cadastrar Tecnologia
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="h-[95%] w-[90%] rounded-xl lg:h-[80%]">
+              <CreateTechDialog />
+            </DialogContent>
+          </Dialog>
         ) : (
           ""
         )}
