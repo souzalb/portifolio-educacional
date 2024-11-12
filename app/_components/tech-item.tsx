@@ -64,12 +64,12 @@ const TechItem = ({ tech }: TechItemProps) => {
                 </Badge>
               </div>
 
-              <div>
+              <div className="">
                 <h3 className="mb-1 text-xs font-bold uppercase text-gray-400">
                   Área Tecnológica
                 </h3>
                 <Badge
-                  className="w-fit rounded-xl"
+                  className="max-w-[100%] rounded-xl lg:w-fit"
                   variant={
                     areaTech == "Tecnologia da Informação"
                       ? "TI"
