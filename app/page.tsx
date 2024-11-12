@@ -54,7 +54,7 @@ const Home = async () => {
               asChild
               key={option.title}
             >
-              <Link href={`/techs?area==${option.title}`}>
+              <Link href={`/techs?area=${option.title}`}>
                 <Image
                   src={option.imageUrl}
                   width={16}
