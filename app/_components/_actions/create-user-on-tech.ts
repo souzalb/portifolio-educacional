@@ -8,7 +8,7 @@ import { authOptions } from "@/app/_lib/auth"
 import { db } from "@/app/_lib/prisma"
 
 interface CreateUserOnTechParams {
-  userId: string
+  userName: string
   nameTech: string
 }
 
@@ -24,13 +24,19 @@ export const createUserOnTech = async (params: CreateUserOnTechParams) => {
     },
   })
 
+  const userId = await db.user.findMany({
+    where: {
+      name: params.userName,
+    },
+  })
+
   const extractTechId = tech.find((tech) => tech.name === params.nameTech)?.id
 
-  const techId = extractTechId
+  const extractUserId = userId.find((user) => user.name === params.userName)?.id
 
   await db.usersOnTechs.create({
     /* eslint-disable  @typescript-eslint/no-explicit-any */
-    data: { userId: params.userId, techId: techId as any },
+    data: { userId: extractUserId as any, techId: extractTechId as any },
   })
 
   revalidatePath("/techs/[id]")

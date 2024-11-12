@@ -19,7 +19,7 @@ const badgeVariants = cva(
           "border-transparent bg-cyan-500 text-cyan-900 hover:bg-cyan-600/80",
         Metalmecânica:
           "border-transparent bg-green-500 text-secondary-foreground hover:bg-green-600/80",
-        SST: "border-transparent bg-green-200 text-secondary-foreground hover:bg-green-300/80",
+        SST: "border-transparent bg-yellow-700 text-secondary-foreground hover:bg-yellow-800/80",
         Eletroeletrônica:
           "border-transparent bg-orange-500 text-secondary-foreground hover:bg-orange-600/80",
         Online:

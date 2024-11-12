@@ -70,7 +70,7 @@ export function ComboboxDemo({ field }: SelectOnChangeProps) {
             className="w-[175px] justify-between lg:w-[218px]"
           >
             {value
-              ? users.find((user) => user.id === value)?.name
+              ? users.find((user) => user.name === value)?.name
               : "Selecionar"}
             <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
           </Button>
@@ -86,7 +86,7 @@ export function ComboboxDemo({ field }: SelectOnChangeProps) {
                 {users.map((users) => (
                   <CommandItem
                     key={users.id}
-                    value={users.id ?? ""}
+                    value={users.name ?? ""}
                     onSelect={(currentValue) => {
                       setValue(currentValue === value ? "" : currentValue)
 
@@ -96,7 +96,7 @@ export function ComboboxDemo({ field }: SelectOnChangeProps) {
                     <Check
                       className={cn(
                         "mr-2 h-4 w-4",
-                        value === users.id ? "opacity-100" : "opacity-0",
+                        value === users.name ? "opacity-100" : "opacity-0",
                       )}
                     />
                     {users.name}

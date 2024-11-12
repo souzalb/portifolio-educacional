@@ -61,11 +61,11 @@ export function AddSilgleUser({ field }: SelectOnChangeProps) {
               variant="outline"
               role="combobox"
               aria-expanded={open}
-              className="w-[175px] justify-between lg:w-full"
+              className="w-full justify-between"
             >
               {/* TODO: Fazer a pesquisa funcionar (estou pegando o id pro banco, mas não da pra) */}
               {value
-                ? users.find((user) => user.id === value)?.name
+                ? users.find((user) => user.name === value)?.name
                 : "Selecionar"}
               <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50 lg:w-full" />
             </Button>
@@ -83,17 +83,16 @@ export function AddSilgleUser({ field }: SelectOnChangeProps) {
                 {users.map((users) => (
                   <CommandItem
                     key={users.id}
-                    value={users.id ?? ""}
+                    value={users.name ?? ""}
                     onSelect={(currentValue) => {
                       setValue(currentValue === value ? "" : currentValue)
-
                       setOpen(false)
                     }}
                   >
                     <Check
                       className={cn(
                         "mr-2 h-4 w-4",
-                        value === users.id ? "opacity-100" : "opacity-0",
+                        value === users.name ? "opacity-100" : "opacity-0",
                       )}
                     />
                     {users.name}

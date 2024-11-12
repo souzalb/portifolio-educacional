@@ -25,7 +25,7 @@ interface GetNameTechProps {
 
 const FormSchema = z.object({
   users: z.string({
-    required_error: "Please select an email to display.",
+    required_error: "Por favor, selecione um usuário",
   }),
 })
 
@@ -51,7 +51,7 @@ export function UserAdd({ name }: GetNameTechProps) {
 
     try {
       await createUserOnTech({
-        userId: data.users,
+        userName: data.users,
         nameTech: name,
       })
 
@@ -84,7 +84,10 @@ export function UserAdd({ name }: GetNameTechProps) {
             )}
           />
 
-          <Button className="w-full bg-green-700" type="submit">
+          <Button
+            className="w-full bg-green-700 hover:bg-green-800/80"
+            type="submit"
+          >
             Adicionar
           </Button>
         </form>

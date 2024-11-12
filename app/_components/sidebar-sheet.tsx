@@ -61,7 +61,8 @@ const SidebarSheet = () => {
           </Button>
         </SheetClose>
 
-        {data?.user?.email == "lincolncloud23@gmail.com" ? (
+        {data?.user?.email == "lincolncloud23@gmail.com" ||
+        data?.user?.email == "ronaldo.souza@docente.senai.br" ? (
           <Dialog>
             <DialogTrigger asChild className="justify-start">
               <Button variant="ghost">

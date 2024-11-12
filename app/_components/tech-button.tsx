@@ -58,7 +58,8 @@ const TechButtons = ({ id, name }: GetTechId) => {
 
   return (
     <>
-      {data?.user?.email == "lincolncloud23@gmail.com" ? (
+      {data?.user?.email == "lincolncloud23@gmail.com" ||
+      data?.user?.email == "ronaldo.souza@docente.senai.br" ? (
         <>
           <div className="flex h-[30px] w-[30px] cursor-pointer items-center justify-center rounded-md bg-orange-500">
             <PencilIcon className="text-white" size={20} />
@@ -122,7 +123,10 @@ const TechButtons = ({ id, name }: GetTechId) => {
 
           <AlertDialogFooter>
             <AlertDialogAction asChild>
-              <Button className="w-full" onClick={handleDeleteTech}>
+              <Button
+                className="w-full bg-red-700 hover:bg-red-800/80"
+                onClick={handleDeleteTech}
+              >
                 Excluir
               </Button>
             </AlertDialogAction>

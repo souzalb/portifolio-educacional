@@ -90,7 +90,7 @@ export function InputForm() {
         rating: data.rating,
         description: data.description,
         imageUrl:
-          "https://drive.google.com/uc?export=view&id=1gNDPB4YB_zvPqll3SE-ovd69ir560Zio",
+          "https://drive.google.com/uc?export=view&id=1B2EtQB8qLfhTRP63lS7uC_p1usrUvpOC",
         access: data.access,
         link: data.link,
         type: data.type,
@@ -98,7 +98,7 @@ export function InputForm() {
       })
 
       await createUserOnTech({
-        userId: data.users,
+        userName: data.users,
         nameTech: data.name,
       })
 
@@ -273,7 +273,10 @@ export function InputForm() {
             />
           </div>
 
-          <Button className="w-full bg-green-700" type="submit">
+          <Button
+            className="w-full bg-green-700 hover:bg-green-800/80"
+            type="submit"
+          >
             Criar
           </Button>
         </form>
