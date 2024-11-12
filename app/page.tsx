@@ -10,7 +10,6 @@ import { db } from "./_lib/prisma"
 import TechItem from "./_components/tech-item"
 import Search from "./_components/search"
 import { Card, CardContent, CardHeader } from "./_components/ui/card"
-import { UserCircle2Icon } from "lucide-react"
 
 const Home = async () => {
   const techs = await db.tech.findMany({
@@ -55,7 +54,7 @@ const Home = async () => {
               asChild
               key={option.title}
             >
-              <Link href={`/techs?area=${option.title}`}>
+              <Link href={`/techs?area==${option.title}`}>
                 <Image
                   src={option.imageUrl}
                   width={16}
@@ -103,11 +102,18 @@ const Home = async () => {
           <CardContent>
             <div className="lg:flex lg:items-center lg:gap-8">
               <div className="mb-4 flex gap-2 lg:mb-0">
-                <UserCircle2Icon size={35} />
+                <Image
+                  className="rounded-full object-cover"
+                  src="https://drive.google.com/uc?export=view&id=1H5UWk7HucoyEm7nos-24PYnVXWm8Pm5K"
+                  width={35}
+                  height={35}
+                  alt="Lincoln Souza"
+                />
+
                 <div>
-                  <p className="text-sm">Lincoln Souza</p>
+                  <p className="text-sm">Lincoln Bezerra de Souza</p>
                   <p className="max-w-[350px] truncate text-xs">
-                    Instrutor de Formação Profissional II
+                    Instrutor de Formação Profissional II (TI)
                   </p>
                 </div>
               </div>
@@ -118,7 +124,7 @@ const Home = async () => {
                   src="https://drive.google.com/uc?export=view&id=1MM6WNo8Gz3Q5AWm2ZBAhibiz4jL5gjZ_"
                   width={35}
                   height={35}
-                  alt="user"
+                  alt="Ronaldo Esperandio"
                 />
                 <div>
                   <p className="text-sm">Ronaldo Esperandio</p>
@@ -134,7 +140,7 @@ const Home = async () => {
                   src="https://drive.google.com/uc?export=view&id=1k0srAX4EIqSi6pLLCCUmNK1WZUxl_fYW"
                   width={35}
                   height={35}
-                  alt="user"
+                  alt="Leonardo de Paula"
                 />
                 <div className="">
                   <p className="text-sm">Leonardo de Paula</p>
