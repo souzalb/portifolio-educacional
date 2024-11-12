@@ -67,7 +67,7 @@ export function ComboboxDemo({ field }: SelectOnChangeProps) {
             variant="outline"
             role="combobox"
             aria-expanded={open}
-            className="w-[175px] justify-between lg:w-[218px]"
+            className="w-full justify-between lg:w-[218px]"
           >
             {value
               ? users.find((user) => user.name === value)?.name
@@ -75,7 +75,7 @@ export function ComboboxDemo({ field }: SelectOnChangeProps) {
             <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-[175px] p-0 lg:w-[218px]">
+        <PopoverContent className="w-full p-0 lg:w-[218px]">
           <Command onValueChange={field.onChange} value={value}>
             <CommandInput placeholder="Procurar" />
 

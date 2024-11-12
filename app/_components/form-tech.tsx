@@ -139,7 +139,7 @@ export function InputForm() {
                   <FormControl>
                     <Input
                       type="number"
-                      placeholder="Digite uma nota de 0 a 5"
+                      placeholder="Nota de 0 a 5"
                       {...field}
                     />
                   </FormControl>
@@ -242,7 +242,7 @@ export function InputForm() {
               control={form.control}
               name="users"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="max-w-[50%]">
                   <div className="flex flex-col gap-2">
                     <FormLabel className="text-xs uppercase text-gray-400">
                       Usuários
@@ -259,7 +259,7 @@ export function InputForm() {
               control={form.control}
               name="area"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="max-w-[50%]">
                   <div className="flex flex-col gap-2">
                     <FormLabel className="text-xs uppercase text-gray-400">
                       Área

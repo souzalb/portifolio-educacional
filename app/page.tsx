@@ -100,7 +100,7 @@ const Home = async () => {
             <h2>Equipe Responsável</h2>
           </CardHeader>
           <CardContent>
-            <div className="lg:flex lg:items-center lg:gap-8">
+            <div className="truncate lg:flex lg:items-center lg:gap-8">
               <div className="mb-4 flex gap-2 lg:mb-0">
                 <Image
                   className="rounded-full object-cover"
@@ -112,7 +112,7 @@ const Home = async () => {
 
                 <div>
                   <p className="text-sm">Lincoln Bezerra de Souza</p>
-                  <p className="max-w-[350px] truncate text-xs">
+                  <p className="max-w-[100%] truncate text-xs">
                     Instrutor de Formação Profissional II (TI)
                   </p>
                 </div>
@@ -128,7 +128,7 @@ const Home = async () => {
                 />
                 <div>
                   <p className="text-sm">Ronaldo Esperandio</p>
-                  <p className="max-w-[350px] truncate text-xs">
+                  <p className="max-w-[100%] truncate text-xs">
                     Orientador de Prática Profissional
                   </p>
                 </div>
@@ -144,7 +144,7 @@ const Home = async () => {
                 />
                 <div className="">
                   <p className="text-sm">Leonardo de Paula</p>
-                  <p className="max-w-[350px] truncate text-xs">
+                  <p className="max-w-[100%] truncate text-xs">
                     Coordenador de Atividades Técnicas e Pedagógicas
                   </p>
                 </div>

@@ -34,7 +34,7 @@ interface SelectOnChangeProps {
 export function SelectArea({ field }: SelectOnChangeProps) {
   return (
     <Select onValueChange={field.onChange} defaultValue={field.value}>
-      <SelectTrigger className="w-[175px] lg:w-[218px]">
+      <SelectTrigger className="w-full lg:w-[218px]">
         <SelectValue placeholder="Selecionar" />
       </SelectTrigger>
       <SelectContent>
