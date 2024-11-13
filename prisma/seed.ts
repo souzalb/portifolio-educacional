@@ -284,6 +284,84 @@ async function main() {
         type: "Site/Software",
         area: "Transversal",
       },
+      {
+        id: "16",
+        name: "Blynk IoT",
+        rating: "4.9",
+        description:
+          "O Blynk IoT é uma plataforma que facilita o desenvolvimento de projetos de Internet das Coisas (IoT). Ele permite criar interfaces personalizadas para monitorar e controlar dispositivos remotamente via aplicativos móveis ou web, sem a necessidade de programação complexa. Ideal para projetos que envolvem automação e controle remoto de hardware.",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1VnVyXmSgx4WEdIfG904rBqCDVWJsSADf",
+        access: "Digital",
+        link: "https://blynk.io/",
+        type: "Software",
+        area: "Automação",
+      },
+      {
+        id: "17",
+        name: "AutoCAD Eletrical",
+        rating: "4.7",
+        description:
+          "O AutoCAD Electrical é uma versão do AutoCAD especializada no design de sistemas elétricos. Ele oferece ferramentas específicas para criar, modificar e documentar esquemas elétricos, painéis de controle e circuitos, automatizando tarefas repetitivas e garantindo precisão no desenvolvimento de projetos de engenharia elétrica.",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1YJV5Xw_d4cpCrnDeOkg2nRGZrCimARch",
+        access: "Digital",
+        link: "https://www.autodesk.com/br/products/autocad/included-toolsets/autocad-electrical",
+        type: "Software",
+        area: "Eletroeletrônica",
+      },
+      {
+        id: "18",
+        name: "MS Project",
+        rating: "4.6",
+        description:
+          "Microsoft Project é um software de gestão de projectos produzido pela Microsoft. Uma das alternativas ao MS Project é o ProjectLibre",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1diGlwu3GzjSMEoTUQ_SU56J8uChr9xZz",
+        access: "Digital",
+        link: "https://www.microsoft.com/pt-br/microsoft-365/project/project-management-software?msockid=14547eb7904562b30e576ad2919c634b/",
+        type: "Software",
+        area: "Gestão",
+      },
+      {
+        id: "19",
+        name: "PMBook",
+        rating: "4.5",
+        description:
+          "Guia do PMI (Project Management Institute) para gerenciamento de projetos. O PMBook é um guia de referência para a gestão de projetos, com diretrizes e melhores práticas para o planejamento, a execução, o monitoramento e o controle de projetos.",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1_5zoCBZKnHpochPXn91iC7fz74uigImV",
+        access: "Digital",
+        link: "https://www.pmi.org/standards/pmbok/",
+        type: "Software",
+        area: "Metalmecânica",
+      },
+      {
+        id: "20",
+        name: "TinkerCAD",
+        rating: "4.9",
+        description:
+          "O Tinkercad é uma ferramenta online de design 3D e simulação de circuitos eletrônicos, voltada para iniciantes. Ele permite criar modelos 3D de forma intuitiva e simular circuitos básicos, incluindo a programação de microcontroladores como o Arduino, sendo ideal para aprendizado e prototipagem rápida em eletrônica e design.",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1Z5muoN5NbrUM7d12Gl4pt-W5Z9qTmjgm",
+        access: "Digital",
+        link: "https://www.tinkercad.com",
+        type: "Site/Software",
+        area: "Automação",
+      },
+      {
+        id: "21",
+        name: "Reparador FIAT",
+        rating: "4.7",
+        description:
+          "No reparador FIAT você encontra conteúdos e serviços de reparo automotivo exclusivos e um catálogo de peças genuínas.",
+        imageUrl:
+          "https://drive.google.com/uc?export=view&id=1jKtQaSgexAIYYMJ-nAUQFZXGgyoyAPcS",
+        access: "Digital",
+        link: "https://reparador.fiat.com.br/",
+        type: "Site",
+        area: "Automotiva",
+      },
     ],
   })
 

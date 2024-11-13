@@ -24,6 +24,8 @@ const badgeVariants = cva(
           "border-transparent bg-orange-500 text-secondary-foreground hover:bg-orange-600/80",
         Online:
           "border-transparent bg-green-400 text-green-900 hover:bg-green-500/80",
+        Automação:
+          "border-transparent bg-gray-400 text-gray-900 hover:bg-gray-500/80",
       },
     },
     defaultVariants: {

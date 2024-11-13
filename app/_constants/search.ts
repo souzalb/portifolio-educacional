@@ -14,7 +14,7 @@ export const quickSearchOption: QuickSearchOption[] = [
   },
   {
     imageUrl: "/eletronica.png",
-    title: "Eletroletrônica",
+    title: "Eletroeletrônica",
   },
   {
     imageUrl: "/gestao.png",

@@ -155,7 +155,7 @@ const TechPage = async ({ params }: TechPageProps) => {
             <Link2Icon className="text-primary" size={18} />
             Link de Acesso
           </h2>
-          <Link href={tech.link}>
+          <Link href={tech.link} target="blank">
             <p className="mt-3 text-xs font-semibold">{tech.link}</p>
           </Link>
         </div>

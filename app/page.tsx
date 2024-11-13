@@ -10,6 +10,12 @@ import { db } from "./_lib/prisma"
 import TechItem from "./_components/tech-item"
 import Search from "./_components/search"
 import { Card, CardContent, CardHeader } from "./_components/ui/card"
+import {
+  FilePlus2Icon,
+  LightbulbIcon,
+  ListCheckIcon,
+  ScreenShareIcon,
+} from "lucide-react"
 
 const Home = async () => {
   const techs = await db.tech.findMany({
@@ -85,6 +91,63 @@ const Home = async () => {
           />
         </div>
 
+        {/* Quick links */}
+        <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">
+          Links Rápidos
+        </h2>
+        <Card>
+          <CardContent>
+            <div className="grid grid-cols-2 lg:flex lg:justify-between">
+              <Link
+                target="blank"
+                href="https://port-tec-edu-senai.my.canva.site"
+              >
+                <div className="mt-6 flex items-center gap-2">
+                  <div className="rounded-xl bg-gray-700 p-3">
+                    <ScreenShareIcon />
+                  </div>
+                  <p className="text-sm font-semibold">Portfólio DN</p>
+                </div>
+              </Link>
+
+              <Link
+                target="blank"
+                href="https://sesisenaisp.sharepoint.com/sites/PORTALGIS/Lists/Aquisio%20de%20Softwares/AllItems.aspx?OR=Teams-HL&CT=1720708200630&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDA2MTMxODQwOCIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D"
+              >
+                <div className="mt-6 flex items-center gap-2">
+                  <div className="rounded-xl bg-gray-700 p-3">
+                    <ListCheckIcon />
+                  </div>
+                  <p className="text-sm font-semibold">Lista de Aquisição</p>
+                </div>
+              </Link>
+
+              <Link
+                target="blank"
+                href="https://sesisenaisp.sharepoint.com/sites/PORTALGIS/SitePages/Requisição-de-Licenças.aspx?OR=Teams-HL&CT=1721059880623&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDA2MTMxODQwOCIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D"
+              >
+                <div className="mt-6 flex items-center gap-2">
+                  <div className="rounded-xl bg-gray-700 p-3">
+                    <FilePlus2Icon />
+                  </div>
+                  <p className="text-sm font-semibold">
+                    Requisição de Licenças
+                  </p>
+                </div>
+              </Link>
+
+              <Link target="blank" href="https://forms.office.com/r/9cTTJrjcG3">
+                <div className="mt-6 flex items-center gap-2">
+                  <div className="rounded-xl bg-gray-700 p-3">
+                    <LightbulbIcon />
+                  </div>
+                  <p className="text-sm font-semibold">Sugestão de novo item</p>
+                </div>
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Techs */}
         <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">
           Tecnologias
@@ -144,7 +207,7 @@ const Home = async () => {
                 />
                 <div className="">
                   <p className="text-sm">Leonardo de Paula</p>
-                  <p className="max-w-[100%] truncate text-xs">
+                  <p className="max-w-[75%] truncate text-xs">
                     Coordenador de Atividades Técnicas e Pedagógicas
                   </p>
                 </div>
