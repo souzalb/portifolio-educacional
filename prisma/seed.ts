@@ -422,3 +422,7 @@ main()
     await prisma.$disconnect()
     process.exit(1)
   })
+
+/* PACKAGE.JSON: "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  }*/
