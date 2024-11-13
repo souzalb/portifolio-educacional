@@ -401,6 +401,11 @@ async function main() {
       { userId: "9", techId: "14" },
       { userId: "1", techId: "15" },
       { userId: "2", techId: "15" },
+      { userId: "3", techId: "16" },
+      { userId: "4", techId: "17" },
+      { userId: "5", techId: "18" },
+      { userId: "6", techId: "19" },
+      { userId: "7", techId: "20" },
     ],
   })
 
