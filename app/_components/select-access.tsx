@@ -38,7 +38,7 @@ export function SelectAccess({ field }: SelectOnChangeProps) {
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectLabel>Area</SelectLabel>
+          <SelectLabel>Acesso</SelectLabel>
           <SelectItem value="Digital">Digital</SelectItem>
           <SelectItem value="Físico">Físico</SelectItem>
         </SelectGroup>
